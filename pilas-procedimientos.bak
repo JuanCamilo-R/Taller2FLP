@@ -1,0 +1,54 @@
+#lang eopl
+
+;;Con procedimientos.
+
+;Constructores.
+
+(define empty-stack
+  (lambda ()
+    (lambda (signal)
+      (cond
+        [(= signal 2) (list 'empty-stack)]
+        )
+      )
+    )
+  )
+
+(define push
+  (lambda (elem stack)
+    (lambda (signal)
+      (cond
+        [(= signal 1) elem]
+        [(= signal 2) stack]
+        )
+      )
+    )
+  )
+
+
+
+;Predicados
+
+(define empty-stack?
+  (lambda (stack)
+    (and (procedure? stack) (equal? (stack 2) ((empty-stack) 2) ))
+    )
+  )
+
+;Extractores
+(define top
+  (lambda (stack)
+    (if (procedure? stack) (stack 1)
+        (eopl:error 'top "Not possible, it requires a procedure") 
+        )
+    )
+  )
+
+(define pop
+  (lambda (stack)
+    (if (procedure? stack)
+        (stack 2)
+        (eopl:error 'pop "Not possible, it requires a procedure")
+        )
+    )
+  )
