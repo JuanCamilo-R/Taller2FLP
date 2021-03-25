@@ -1,0 +1,36 @@
+#lang eopl
+
+
+(define-datatype stack stack?
+  (empty-stack)
+  (push (elem number-symbol?)
+        (rest stack?))
+  )
+
+(define number-symbol?
+  (lambda (exp)
+    (or (number? exp) (symbol? exp))
+    )
+  )
+
+(define top
+  (lambda (stack-exp)
+    (cases stack stack-exp
+      (empty-stack ()  (eopl:error 'pop "Not possible, it requires a stack datatype"))
+      (push (elem stack)
+            elem
+            )
+      )
+    )
+  )
+
+(define pop
+  (lambda (stack-exp)
+    (cases stack stack-exp
+      (empty-stack ()  (eopl:error 'pop "Not possible, it requires a stack datatype"))
+      (push (elem stack)
+            stack
+            )
+      )
+    )
+  )
