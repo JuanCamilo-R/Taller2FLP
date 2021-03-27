@@ -62,7 +62,7 @@
 0 10 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 0 9
 #"Standard\0"
 0 75 12 #"Courier New\0"
-0 16 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 2 1
+0 10 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 2 1
 #"\0"
 0 -1 1 #"\0"
 1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 -1 -1 2 24
@@ -427,7 +427,7 @@
 224 255 255 -1 -1 4 1 #"\0"
 0 -1 1 #"\0"
 1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 1 0.0 0.0 0.0 0.0 0.0 0.0 184 134 11
-224 255 255 -1 -1           0 729 0 24 29 1 #"\n"
+224 255 255 -1 -1           0 727 0 24 29 1 #"\n"
 0 0 28 3 10 #"#lang eopl"
 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
@@ -574,8 +574,7 @@
 0 0 17 3 1 #"v"
 0 0 17 3 1 #" "
 0 0 17 3 1 #"s"
-0 0 17 3 2 #") "
-0 0 17 3 46 #"'(1 2))) ;Resultado esperado: '( (v 1) (s 2) )"
+0 0 17 3 48 #") '(1 2))) ;Resultado esperado: '( (v 1) (s 2) )"
 0 0 24 29 1 #"\n"
 0 0 17 3 1 #";"
 0 0 17 3 1 #"("
@@ -594,8 +593,7 @@
 0 0 17 3 1 #"m"
 0 0 17 3 2 #") "
 0 0 17 3 1 #"'"
-0 0 17 3 1 #"("
-0 0 17 3 54 #"4 50 3))) ;Resultado esperado: '( (k 4) (a 50) (m 3) )"
+0 0 17 3 55 #"(4 50 3))) ;Resultado esperado: '( (k 4) (a 50) (m 3) )"
 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
@@ -645,14 +643,15 @@
 0 0 24 3 1 #")"
 0           0 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
-0 9         157 21           0 0           0 25 0 17 3 2 #";4"
+0 0 24 29 1 #"\n"
+0 9         151 21           0 0           0 24 0 17 3 2 #";4"
 0 0 24 29 1 #"\n"
 0 0 17 3 11 #";extend-env"
 0 0 24 29 1 #"\n"
-0 0 17 3 81
+0 0 17 3 70
 (6
- #";Contrato: lista de simbolos * lista de numeros * ambiente ->  ambien"
- #"te extendido"
+ #";Contrato: lista de simbolos * lista de numeros, ambiente ->  ambient"
+ #"e"
 ) 0 0 24 29 1 #"\n"
 0 0 17 3 1 #";"
 0 0 17 3 13 #"Prop\303\263sito: P"
@@ -669,8 +668,7 @@
 0 0 17 3 1 #" "
 0 0 17 3 1 #"a"
 0 0 17 3 1 #"l"
-0 0 17 3 1 #" "
-0 0 17 3 51 #"usuario con el constructor para extender ambientes."
+0 0 17 3 52 #" usuario con el constructor para extender ambientes."
 0 0 24 29 1 #"\n"
 0 0 17 3 44 #";Ambas listas deben tener la misma longitud."
 0           0 0 0 24 29 1 #"\n"
@@ -1155,7 +1153,7 @@
 0 0 24 29 1 #"\n"
 0 0 24 3 24 #"                       )"
 0 0 24 29 1 #"\n"
-0 0 24 3 25 #"                         "
+0 0 24 3 17 #"                 "
 0 0 24 29 1 #"\n"
 0 0 24 3 22 #"                     )"
 0 0 24 29 1 #"\n"
@@ -1235,11 +1233,10 @@
 0 0 17 3 2 #";("
 0 0 17 3 6 #"define"
 0 0 17 3 1 #" "
-0 0 17 3 17 #"check-env-prueba5"
-0 0 17 3 94
+0 0 17 3 111
 (9
- #" (check-env e 4)) ;Resultado esperado: check-env: Not possible to sea"
- #"rch depth on environment."
+ #"check-env-prueba5 (check-env e 4)) ;Resultado esperado: check-env: No"
+ #"t possible to search depth on environment."
 ) 0 0 24 29 1 #"\n"
 0 0 24 3 1 #"("
 0 0 15 3 6 #"define"

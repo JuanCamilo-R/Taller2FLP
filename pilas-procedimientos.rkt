@@ -62,7 +62,7 @@
 0 10 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 0 9
 #"Standard\0"
 0 75 12 #"Courier New\0"
-0 16 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 2 1
+0 10 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 2 1
 #"\0"
 0 -1 1 #"\0"
 1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 -1 -1 2 24
@@ -427,7 +427,7 @@
 224 255 255 -1 -1 4 1 #"\0"
 0 -1 1 #"\0"
 1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 1 0.0 0.0 0.0 0.0 0.0 0.0 184 134 11
-224 255 255 -1 -1           0 450 0 28 3 10 #"#lang eopl"
+224 255 255 -1 -1           0 451 0 28 3 10 #"#lang eopl"
 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
 0 0 17 3 53
@@ -447,12 +447,13 @@
 0 0 24 29 1 #"\n"
 0 9          37 21           0 0           0 5 0 17 3 12 #";empty-stack"
 0 0 24 29 1 #"\n"
-0 0 17 3 48 #";Contrato: () -> procedimiento: n\303\272mero -> lista"
+0 0 17 3 47 #";Contrato: () -> procedimiento: numero -> lista"
 0 0 24 29 1 #"\n"
-0 0 17 3 113
+0 0 17 3 123
 (4
  #";Prop\xC3\xB3sito: Procedimiento que retorna otro procedimiento que a"
- #" su vez espera un n\xC3\xBAmero y retorna la pila vac\xC3\xADa"
+ #" su vez espera un n\xC3\xBAmero igual a 2 y retorna la pila vac\xC3"
+ #"\xADa"
 ) 0           0 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
 0 0 24 3 1 #"("
@@ -494,11 +495,10 @@
 0 0 24 29 1 #"\n"
 0 9          61 21           0 0           0 9 0 17 3 5 #";push"
 0 0 24 29 1 #"\n"
-0 0 17 3 98
+0 0 17 3 91
 (5
- #";Contrato: \xC3\xB3 s\xC3\xADmbolo \xC3\xB3 n\xC3\xBAmero, pila -> pr"
- #"ocedimiento: numero -> (\xC3\xB3 s\xC3\xADmbolo \xC3\xB3 pila) \xC3"
- #"\xB3 pila."
+ #";Contrato: s\xC3\xADmbolo o n\xC3\xBAmero, pila -> procedimiento: num"
+ #"ero -> (o s\xC3\xADmbolo o pila) o pila."
 ) 0 0 24 29 1 #"\n"
 0 0 17 3 87
 (6
@@ -571,7 +571,7 @@
 0 0 15 3 6 #"define"
 0 0 24 3 1 #" "
 0 0 14 3 12 #"push-prueba1"
-0 0 24 3 2 #" ("
+0 0 24 3 3 #"  ("
 0 0 14 3 4 #"push"
 0 0 24 3 1 #" "
 0 0 21 3 1 #"1"
@@ -678,7 +678,7 @@
 0 0 14 3 11 #"empty-stack"
 0 0 24 3 2 #") "
 0 0 21 3 1 #"2"
-0 0 24 3 4 #") ))"
+0 0 24 3 3 #")))"
 0 0 24 29 1 #"\n"
 0 0 24 3 5 #"    )"
 0 0 24 29 1 #"\n"
@@ -727,13 +727,14 @@
 0 0 24 29 1 #"\n"
 0 9          37 21           0 0           0 5 0 17 3 4 #";top"
 0 0 24 29 1 #"\n"
-0 0 17 3 34 #";Contrato: stack v\303\241lido -> numero"
+0 0 17 3 36 #";Contrato: stack v\303\241lido -> elemento"
 0 0 24 29 1 #"\n"
 0 0 17 3 78
 (9
  #";Prop\xC3\xB3sito: Procedimiento que recibe un stack y retorna su ele"
  #"mento superior."
 ) 0           0 0 0 24 29 1 #"\n"
+0 0 24 29 1 #"\n"
 0 0 24 3 1 #"("
 0 0 15 3 6 #"define"
 0 0 24 3 1 #" "
@@ -770,7 +771,7 @@
 0 0 24 29 1 #"\n"
 0 0 24 3 5 #"    )"
 0 0 24 29 1 #"\n"
-0 0 24 3 3 #"  )"
+0 0 24 3 18 #"  )               "
 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
 0 0 17 3 8 #";Pruebas"
